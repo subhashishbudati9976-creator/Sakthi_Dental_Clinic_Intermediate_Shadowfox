@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakthi Dental Clinic • Specialized Dental Care in Hosur</title>
+  <meta name="description" content="Sakthi Dental Clinic in Hosur provides specialized dental care for women, children, and families. Led by Dr. Anupriya with 20+ years of expertise.">
+  <meta property="og:title" content="Sakthi Dental Clinic • Specialized Dental Care for Women, Children & Families">
+  <meta property="og:description" content="Experience compassionate, expert-led dental services in Hosur. General dentistry, braces, aligners, implants, and laser treatments.">
+  <meta property="og:image" content="assets/character_neutral.webp">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Navigation Bar -->
+  <header class="minimal-nav" id="siteNav">
+    <a href="index.html" class="nav-brand" id="brandLogo" aria-label="Sakthi Dental Clinic Home">
+      <span class="brand-sparkle">✦</span>
+      <span>Sakthi Dental</span>
+      <span class="brand-sub">HOSUR</span>
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-nav-reserve" data-open-appointment aria-label="Open Appointment Modal">
+        <span>Fix an Appointment</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="btn-mobile-nav-toggle" id="btnMobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="nav-brand">
+        <span class="brand-sparkle">✦</span>
+        <span>Sakthi Dental</span>
+      </div>
+      <button class="btn-close-mobile" id="closeMobileNav" aria-label="Close navigation">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+      <li><a href="faqs.html" class="mobile-nav-link">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="privacy-policy.html" class="mobile-nav-link">Privacy Policy</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn-pill-primary" style="width: 100%; justify-content: center;" data-open-appointment>
+        <span>Fix an Appointment</span>
+      </button>
+      <a href="tel:+919862890897" class="btn-pill-glass" style="width: 100%; justify-content: center; text-decoration: none;">
+        <span>Call: +91 9862890897</span>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ===================================================================
+         HERO SECTION: Preserving Existing Hero Character Visual
+         =================================================================== -->
+    <section class="hero-experience" id="hero" aria-label="Sakthi Dental Clinic Welcome">
+      
+      <!-- Studio Ambient Lighting Glow -->
+      <div class="hero-ambient-lighting" aria-hidden="true"></div>
+
+      <!-- Preserved Authoritative Hero Character Visual (Zero Crop, 16:9 Centered) -->
+      <div class="hero-character-stage" id="characterVisualStage" aria-hidden="true">
+        <canvas id="characterCanvas" width="1920" height="1080" aria-hidden="true"></canvas>
+        <img class="character-preload-poster" src="assets/character_neutral.webp" alt="" aria-hidden="true">
+      </div>
+
+      <!-- Left-Hand Editorial Content Overlay -->
+      <div class="hero-content-left">
+        <div class="hero-pill-tag">
+          <span class="hero-pill-dot" aria-hidden="true"></span>
+          <span>Hosur, Tamil Nadu • Est. 2004</span>
+        </div>
+
+        <h1 class="hero-headline">
+          Specialized Dental Care for<br>
+          <span class="hero-accent">Women, Children & Families</span>
+        </h1>
+
+        <p class="hero-description">
+          Experience compassionate, expert-led dental services tailored to your needs, all in a modern and welcoming environment.
+        </p>
+
+        <!-- CTA Buttons Specified by Client Brief -->
+        <div class="hero-actions-row">
+          <button class="btn-pill-primary" data-open-appointment id="btnHeroAppt">
+            <span>Fix an Appointment</span>
+            <div class="btn-arrow-circle" aria-hidden="true">→</div>
+          </button>
+
+          <a href="tel:+919862890897" class="btn-pill-glass" id="btnHeroEmergency">
+            <span>Emergency Dental Support</span>
+          </a>
+        </div>
+
+        <div class="hero-social-proof">
+          <span class="hero-stars" aria-hidden="true">★★★★★</span>
+          <span>Trusted by Hosur Families for Over 20 Years</span>
+        </div>
+      </div>
+
+      <!-- Right-Side Floating Signature Highlights -->
+      <div class="hero-floating-right" aria-label="Clinic Highlights">
+        <div class="floating-signature-card">
+          <div class="signature-card-header">
+            <span class="signature-card-title">Clinic Specialization</span>
+            <span class="signature-card-live">
+              <span class="live-beacon" aria-hidden="true"></span>
+              <span>DAILY OPEN</span>
+            </span>
+          </div>
+
+          <div class="signature-items-list">
+            <a href="treatments.html" class="signature-item">
+              <div class="signature-icon-box" aria-hidden="true">✨</div>
+              <div class="signature-info">
+                <span class="signature-name">Women & Child Care</span>
+                <span class="signature-desc">Gentle, Specialized Care</span>
+              </div>
+            </a>
+
+            <a href="treatments.html" class="signature-item">
+              <div class="signature-icon-box" aria-hidden="true">💎</div>
+              <div class="signature-info">
+                <span class="signature-name">Painless Laser Dentistry</span>
+                <span class="signature-desc">Minimally Invasive Tech</span>
+              </div>
+            </a>
+
+            <a href="treatments.html" class="signature-item">
+              <div class="signature-icon-box" aria-hidden="true">🦷</div>
+              <div class="signature-info">
+                <span class="signature-name">Braces & Clear Aligners</span>
+                <span class="signature-desc">Precision Smile Alignment</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Rotating Circular Stamp Badge -->
+        <a href="about.html" class="rotating-badge-wrapper" title="About Sakthi Dental Clinic">
+          <svg class="rotating-badge-svg" viewBox="0 0 100 100" aria-hidden="true">
+            <path id="badgeCirclePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
+            <text>
+              <textPath href="#badgeCirclePath" startOffset="0%">
+                • SAKTHI DENTAL CLINIC • HOSUR • EST. 2004 •
+              </textPath>
+            </text>
+          </svg>
+          <div class="rotating-badge-center" aria-hidden="true">✦</div>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ===================================================================
+         WELCOME / ASSURANCE BANNER
+         =================================================================== -->
+    <section class="assurance-banner-section" aria-label="Welcome and Assurance">
+      <div class="assurance-banner">
+        <div class="assurance-content">
+          <div class="assurance-pill">Patient Assurance</div>
+          <h2 class="assurance-title">“You are always in safe hands.”</h2>
+          <p class="assurance-subtitle">We are ready to help, anytime.</p>
+          <p class="assurance-body">
+            At Sakthi Dental Clinic, we believe every patient deserves compassionate, respectful, and stress-free dental care. Whether it is your child’s first check-up, routine preventive scaling, or advanced restorative surgery, our Hosur team combines gentle touch with state-of-the-art dental technology.
+          </p>
+        </div>
+
+        <div class="assurance-cards-grid">
+          <div class="assurance-card">
+            <div class="assurance-card-icon" aria-hidden="true">🛡️</div>
+            <h3 class="assurance-card-title">Hospital-Grade Sterilization</h3>
+            <p class="assurance-card-text">Strict infection control and autoclaved instrumentation for total peace of mind.</p>
+          </div>
+
+          <div class="assurance-card">
+            <div class="assurance-card-icon" aria-hidden="true">🌸</div>
+            <h3 class="assurance-card-title">Comfort-Focused Care</h3>
+            <p class="assurance-card-text">Specialized gentle protocols specifically designed for women, children, and anxious patients.</p>
+          </div>
+
+          <div class="assurance-card">
+            <div class="assurance-card-icon" aria-hidden="true">⏱️</div>
+            <h3 class="assurance-card-title">Daily Doctor Availability</h3>
+            <p class="assurance-card-text">Open daily from 9:00 AM to 9:00 PM for convenient family consultations.</p>
+          </div>
+
+          <div class="assurance-card">
+            <div class="assurance-card-icon" aria-hidden="true">🤝</div>
+            <h3 class="assurance-card-title">Transparent Pricing</h3>
+            <p class="assurance-card-text">Honest guidance, zero hidden costs, and detailed treatment plans before starting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         WHY CHOOSE SAKTHI DENTAL CLINIC?
+         =================================================================== -->
+    <section class="section-wrapper" id="why-choose" aria-label="Why Choose Sakthi Dental Clinic">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Clinical Philosophy</span>
+          <h2 class="section-title">Why Choose Sakthi Dental Clinic?</h2>
+          <p class="section-subtitle">
+            What makes our practice a trusted healthcare destination in Hosur for over two decades.
+          </p>
+        </div>
+
+        <div class="why-choose-grid">
+          <!-- 1. All-in-One Care -->
+          <div class="why-card">
+            <div class="why-icon-box" aria-hidden="true">🏥</div>
+            <h3 class="why-card-title">All-in-One Care</h3>
+            <p class="why-card-body">
+              From general dentistry to specialized treatments, everything under one roof.
+            </p>
+          </div>
+
+          <!-- 2. Experienced Doctors -->
+          <div class="why-card">
+            <div class="why-icon-box" aria-hidden="true">🩺</div>
+            <h3 class="why-card-title">Experienced Doctors</h3>
+            <p class="why-card-body">
+              Our dentists are professionally trained and committed to personalized patient care.
+            </p>
+          </div>
+
+          <!-- 3. Patient-Centric Approach -->
+          <div class="why-card">
+            <div class="why-icon-box" aria-hidden="true">💖</div>
+            <h3 class="why-card-title">Patient-Centric Approach</h3>
+            <p class="why-card-body">
+              We prioritize comfort, safety, and transparency in every treatment we offer.
+            </p>
+          </div>
+
+          <!-- 4. Technology-Driven Services -->
+          <div class="why-card">
+            <div class="why-icon-box" aria-hidden="true">🔬</div>
+            <h3 class="why-card-title">Technology-Driven Services</h3>
+            <p class="why-card-body">
+              Modern tools and equipment ensure precision and safety.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         OUR CORE TREATMENTS ("Explore Our Services")
+         =================================================================== -->
+    <section class="section-wrapper" id="services" aria-label="Core Treatments">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Comprehensive Care</span>
+          <h2 class="section-title">Explore Our Services</h2>
+          <p class="section-subtitle">
+            Reliable, modern dental solutions delivered with precision and patient comfort.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Treatment 1: Tooth Extraction -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">🦷</div>
+                <span class="service-num">01</span>
+              </div>
+              <h3 class="service-card-title">Tooth Extraction</h3>
+              <p class="service-card-desc">
+                Safe and painless removal of impacted or decayed teeth.
+              </p>
+            </div>
+            <a href="treatments.html#extraction" class="service-card-link">
+              <span>Read Full Details</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Treatment 2: Artificial Complete Denture -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">✨</div>
+                <span class="service-num">02</span>
+              </div>
+              <h3 class="service-card-title">Artificial Complete Denture</h3>
+              <p class="service-card-desc">
+                Full mouth replacement to restore confidence and function.
+              </p>
+            </div>
+            <a href="treatments.html#dentures" class="service-card-link">
+              <span>Read Full Details</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Treatment 3: Tooth Filling -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">🛡️</div>
+                <span class="service-num">03</span>
+              </div>
+              <h3 class="service-card-title">Tooth Filling</h3>
+              <p class="service-card-desc">
+                Composite fillings for cavity treatment and tooth restoration.
+              </p>
+            </div>
+            <a href="treatments.html#filling" class="service-card-link">
+              <span>Read Full Details</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Treatment 4: Teeth Cleaning or Scaling -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">💧</div>
+                <span class="service-num">04</span>
+              </div>
+              <h3 class="service-card-title">Teeth Cleaning or Scaling</h3>
+              <p class="service-card-desc">
+                Preventive care to remove plaque and protect gums.
+              </p>
+            </div>
+            <a href="treatments.html#scaling" class="service-card-link">
+              <span>Read Full Details</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Treatment 5: Bleaching -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">🌟</div>
+                <span class="service-num">05</span>
+              </div>
+              <h3 class="service-card-title">Bleaching</h3>
+              <p class="service-card-desc">
+                Cosmetic whitening treatments for a brighter smile.
+              </p>
+            </div>
+            <a href="treatments.html#bleaching" class="service-card-link">
+              <span>Read Full Details</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Treatment 6: Orthodontic Treatment -->
+          <div class="service-card">
+            <div>
+              <div class="service-card-top">
+                <div class="service-icon-wrap" aria-hidden="true">📐</div>
+                <span class="service-num">06</span>
+              </div>
+              <h3 class="service-card-title">Orthodontic Treatment</h3>
+              <p class="service-card-desc">
+                Braces and aligners to straighten and align teeth.
+              </p>
+            </div>
+            <a href="treatments.html#braces" class="service-card-link">
+              <span>Read Full Details</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="services-cta-row">
+          <a href="treatments.html" class="btn-pill-primary">
+            <span>View Full List of Treatments (15 Procedures)</span>
+            <div class="btn-arrow-circle" aria-hidden="true">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CLINIC HIGHLIGHTS / AMENITIES
+         =================================================================== -->
+    <section class="section-wrapper" id="facilities" aria-label="Clinic Amenities">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Convenience & Accessibility</span>
+          <h2 class="section-title">Clinic Facilities</h2>
+          <p class="section-subtitle">
+            Thoughtfully equipped amenities to ensure every patient visit is smooth, comfortable, and accessible.
+          </p>
+        </div>
+
+        <div class="facilities-grid">
+          <!-- Amenity 1 -->
+          <div class="facility-card">
+            <div class="facility-icon-circle" aria-hidden="true">📍</div>
+            <h3 class="facility-title">Convenient Central Location</h3>
+            <p class="facility-desc">Easily accessible in Anthivadi, Hosur with straightforward neighborhood connectivity.</p>
+          </div>
+
+          <!-- Amenity 2 -->
+          <div class="facility-card">
+            <div class="facility-icon-circle" aria-hidden="true">🚗</div>
+            <h3 class="facility-title">Hassle-Free Parking</h3>
+            <p class="facility-desc">Dedicated, worry-free parking spaces directly available for patients and families.</p>
+          </div>
+
+          <!-- Amenity 3 -->
+          <div class="facility-card">
+            <div class="facility-icon-circle" aria-hidden="true">⏰</div>
+            <h3 class="facility-title">Doctors Available Daily (9 AM - 9 PM)</h3>
+            <p class="facility-desc">Extended daily consulting hours to accommodate busy work and school schedules.</p>
+          </div>
+
+          <!-- Amenity 4 -->
+          <div class="facility-card">
+            <div class="facility-icon-circle" aria-hidden="true">🚐</div>
+            <h3 class="facility-title">Pickup & Drop-Off Support</h3>
+            <p class="facility-desc">Transportation coordination support available for senior citizens and emergency cases.</p>
+          </div>
+
+          <!-- Amenity 5 -->
+          <div class="facility-card">
+            <div class="facility-icon-circle" aria-hidden="true">♿</div>
+            <h3 class="facility-title">Wheelchair Access</h3>
+            <p class="facility-desc">Step-free ramp entry and barrier-free access for patients with physical mobility needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TESTIMONIALS: REAL PATIENT REVIEWS FROM BRIEF
+         =================================================================== -->
+    <section class="section-wrapper" id="testimonials" aria-label="Patient Testimonials">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Authentic Feedback</span>
+          <h2 class="section-title">What Our Patients Say</h2>
+          <p class="section-subtitle">
+            Real experiences from patients who trust Sakthi Dental Clinic for their family smile care.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-quote-icon" aria-hidden="true">“</div>
+              <p class="testimonial-quote-text">
+                The doctors are extremely kind and attentive. My braces treatment is progressing really well. 5/5.
+              </p>
+            </div>
+            <div class="testimonial-author-block">
+              <div class="testimonial-author-avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="testimonial-author-name">Manisha M</div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★ · Orthodontic Patient</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-quote-icon" aria-hidden="true">“</div>
+              <p class="testimonial-quote-text">
+                I got my teeth cleaned and whitened here, and the results were amazing. The staff is so humble and professional. I’ve recommended Sakthi Dental Clinic to my entire family.
+              </p>
+            </div>
+            <div class="testimonial-author-block">
+              <div class="testimonial-author-avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="testimonial-author-name">Mr. Arun Kumar</div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★ · Cleaning & Whitening</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-quote-icon" aria-hidden="true">“</div>
+              <p class="testimonial-quote-text">
+                Their attention to detail is outstanding. My daughter needed braces and the entire process from consultation to regular follow ups has been so smooth. Really grateful for their care.
+              </p>
+            </div>
+            <div class="testimonial-author-block">
+              <div class="testimonial-author-avatar" aria-hidden="true">R</div>
+              <div>
+                <div class="testimonial-author-name">Mrs. Revathi S.</div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★ · Pediatric Orthodontics</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         ABOUT US TEASER / FOUNDER HIGHLIGHT
+         =================================================================== -->
+    <section class="section-wrapper" id="about-teaser" aria-label="Meet Dr. Anupriya">
+      <div class="section-inner">
+        <div class="about-hero-card">
+          <div class="about-narrative">
+            <span class="section-tag">Founder & Chief Dental Surgeon</span>
+            <h2 class="about-headline">Get to Know Dr. Anupriya</h2>
+            <p class="about-subheading">Your Trusted Partner in Dental Care</p>
+            <p class="about-text">
+              Bringing over 20 years of expertise, Dr. Anupriya stands as a leading figure in modern dentistry at Hosur. She began her professional journey after graduating in 2000. Her passion for delivering exceptional dental care was further nurtured during six impactful years at Mathura Clinic, where she refined her clinical skills and deepened her commitment to patient wellbeing.
+            </p>
+            <p class="about-text">
+              In 2004, Dr. Anupriya established Sakthi Dental Clinic in Hosur with a clear vision to make high-quality dental care accessible to all. Her dedication extends beyond private practice, reflected in her long-standing service with the Primary Health Center at Chandara Hospital, where she has been a trusted dental consultant for over a decade.
+            </p>
+            <div style="margin-top: 1rem;">
+              <a href="about.html" class="btn-pill-primary">
+                <span>Read Full Story, Vision & Meet Our Team</span>
+                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-portrait-frame">
+            <img class="about-portrait-img" src="assets/character_neutral.webp" alt="Dr. Anupriya - Sakthi Dental Clinic Founder">
+            <div class="about-portrait-badge">
+              <div>
+                <div class="about-badge-title">Dr. Anupriya</div>
+                <div class="about-badge-sub">Founder • 20+ Years Experience</div>
+              </div>
+              <span style="font-size: 1.4rem; color: var(--accent-amber);">✦</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FREQUENTLY ASKED QUESTIONS PREVIEW
+         =================================================================== -->
+    <section class="section-wrapper" id="faq-preview" aria-label="Frequently Asked Questions">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Patient Guidance</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Quick, reliable answers to common dental inquiries from our patients.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn1">
+              <span>1. Can medication completely relieve tooth pain?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqBtn1">
+              <div class="faq-answer-inner">
+                Not entirely. While medications may offer short-term relief, long-lasting relief requires identifying and treating the root cause of the pain through professional dental care.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn2">
+              <span>2. Does teeth scaling cause enamel damage, sensitivity, or gaps between teeth?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqBtn2">
+              <div class="faq-answer-inner">
+                No. Scaling safely removes plaque and tartar from teeth and below the gum line. It doesn’t damage enamel or create gaps. Some temporary sensitivity may occur, but it usually subsides as gums heal and reattach to the teeth.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn3">
+              <span>3. Can painful teeth be treated with fillings?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqBtn3">
+              <div class="faq-answer-inner">
+                Not always. If the cavity has reached the pulp, the innermost layer of the tooth, simple filling won’t help. In such cases, root canal treatment or tooth extraction might be necessary. Fillings are effective only when the damage is limited to the outer layers (enamel and dentin).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqBtn4">
+              <span>4. What is the best age to get braces?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqBtn4">
+              <div class="faq-answer-inner">
+                Braces are most effective between ages 12 and 14, when the jaw and teeth are still developing. However, some cases may benefit from earlier intervention depending on the condition.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-cta-row" style="margin-top: 2.5rem;">
+          <a href="faqs.html" class="btn-pill-glass">
+            <span>View All 14 Frequently Asked Questions</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         CONTACT & APPOINTMENT SANCTUARY
+         =================================================================== -->
+    <section class="section-wrapper" id="contact-section" aria-label="Contact and Appointment Request">
+      <div class="section-inner">
+        <div class="contact-container">
+          <!-- Left: Contact Form -->
+          <div class="contact-form-side">
+            <div class="section-tag" style="align-self: flex-start;">Connect With Us</div>
+            <h2 class="contact-side-title">We would love to hear from you</h2>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              Have questions about a treatment or need to schedule an appointment for your family? Send us a message or request a consultation.
+            </p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-status-alert" id="contactStatusMsg" role="alert"></div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactName">Full Name *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="Enter your email address" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone Number *</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="Enter contact phone number" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Your Message (Optional)</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="Describe your dental concern or preferred appointment date..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-contact-submit" id="btnSubmitContact">
+                <span>Submit</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Reach Us Info -->
+          <div class="reach-us-side">
+            <h3 class="reach-title">Reach us</h3>
+            
+            <div class="reach-items-list">
+              <!-- Address -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">📍</div>
+                <div class="reach-details">
+                  <span class="reach-label">Address</span>
+                  <div class="reach-value">
+                    B2/8, SBM Layout, Anthivadi,<br>
+                    Hosur, Tamil Nadu 635109, India
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">📧</div>
+                <div class="reach-details">
+                  <span class="reach-label">Email</span>
+                  <div class="reach-value">
+                    <a href="mailto:info@sakthidentalclinic.in">info@sakthidentalclinic.in</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">📞</div>
+                <div class="reach-details">
+                  <span class="reach-label">Phone</span>
+                  <div class="reach-value">
+                    <a href="tel:+919862890897">+91 9862890897</a> / <a href="tel:+919363298118">+91 9363298118</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timings -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">⏰</div>
+                <div class="reach-details">
+                  <span class="reach-label">Clinic Timings</span>
+                  <div class="reach-value">
+                    <strong>Sunday to Saturday: 9am to 7pm</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid var(--glass-border-subtle); padding-top: 1.2rem; font-size: 0.88rem; color: var(--text-tertiary);">
+              * Note: Doctors are available daily from 9 AM to 9 PM for special schedule coordination and emergency dental support.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand-title">✦ SAKTHI DENTAL CLINIC</div>
+        <p class="footer-tagline">
+          Specialized dental care tailored especially for women, children, and families in Hosur. Combining 20+ years of clinical excellence with gentle, modern technology.
+        </p>
+        <div class="footer-social-row" aria-label="Social Media Links">
+          <a href="#" class="social-icon-btn" aria-label="Instagram" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="Facebook" title="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="YouTube" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="index.html">Home</a></li>
+          <li class="footer-link-item"><a href="about.html">About Us</a></li>
+          <li class="footer-link-item"><a href="treatments.html">Treatments</a></li>
+          <li class="footer-link-item"><a href="faqs.html">FAQs</a></li>
+          <li class="footer-link-item"><a href="contact.html">Contact Us</a></li>
+          <li class="footer-link-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Key Treatments</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="treatments.html#scaling">Teeth Cleaning & Scaling</a></li>
+          <li class="footer-link-item"><a href="treatments.html#filling">Tooth Filling</a></li>
+          <li class="footer-link-item"><a href="treatments.html#extraction">Tooth Extraction</a></li>
+          <li class="footer-link-item"><a href="treatments.html#implants">Dental Implants</a></li>
+          <li class="footer-link-item"><a href="treatments.html#laser">Laser Dentistry</a></li>
+          <li class="footer-link-item"><a href="treatments.html#braces">Orthodontic Braces</a></li>
+          <li class="footer-link-item"><a href="treatments.html#aligners">Clear Aligners</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hosur Clinic</h4>
+        <div style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+          B2/8, SBM Layout, Anthivadi,<br>
+          Hosur, Tamil Nadu 635109, India<br><br>
+          <strong>Phone:</strong> +91 9862890897<br>
+          <strong>Email:</strong> info@sakthidentalclinic.in<br>
+          <strong>Hours:</strong> Sun – Sat: 9am – 7pm
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-row">
+      <div>© 2026 Sakthi Dental Clinic. All Rights Reserved.</div>
+      <div>Specialized Dental Care for Women, Children & Families • Hosur</div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal Dialog -->
+  <div class="modal-overlay" id="appointmentModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalApptTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="section-tag" style="margin-bottom: 4px;">Book Visit</span>
+          <h3 class="modal-title" id="modalApptTitle">Fix an Appointment</h3>
+        </div>
+        <button class="btn-close-modal" id="closeAppointmentModal" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <form id="appointmentModalForm">
+        <div class="form-status-alert" id="appointmentStatusMsg" role="alert"></div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPatientName">Patient Full Name *</label>
+          <input type="text" id="modalPatientName" class="form-input" placeholder="Enter patient full name" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPatientPhone">Contact Phone Number *</label>
+          <input type="tel" id="modalPatientPhone" class="form-input" placeholder="Enter contact phone number" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalTreatmentSelect">Desired Treatment / Consultation</label>
+          <select id="modalTreatmentSelect" class="form-select">
+            <option value="General Consultation">General Dental Consultation</option>
+            <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+            <option value="Tooth Filling">Tooth Filling</option>
+            <option value="Tooth Extraction">Tooth Extraction</option>
+            <option value="Pediatric Dentistry">Pediatric Dentistry (Child Care)</option>
+            <option value="Orthodontic Braces">Orthodontic Braces</option>
+            <option value="Clear Aligners">Clear Aligners</option>
+            <option value="Dental Implants">Dental Implants</option>
+            <option value="Laser Dentistry">Laser Dentistry</option>
+            <option value="Teeth Whitening">Teeth Whitening (Bleaching)</option>
+            <option value="Artificial Complete Denture">Artificial Complete Denture</option>
+            <option value="Other Procedure">Other Specialized Dental Care</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 18px;">
+          <label class="form-label" for="modalApptDate">Preferred Appointment Date</label>
+          <input type="date" id="modalApptDate" class="form-input">
+        </div>
+
+        <button type="submit" class="btn-pill-primary" style="width: 100%; justify-content: center;">
+          <span>Fix an Appointment</span>
+          <div class="btn-arrow-circle" aria-hidden="true">→</div>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared Interactive Script -->
+  <script src="app.js"></script>
+  <script src="hero-tracker.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new InteractiveCharacterHero({
+        container: document.getElementById('hero'),
+        canvas: document.getElementById('characterCanvas'),
+        frameBasePath: 'assets/character_frames/',
+        responseSpeed: 32,
+        deadZoneRadius: 0.045,
+        maxCacheSize: 16,
+        maxConcurrentDecodes: 2
+      });
+    });
+  </script>
+</body>
+</html>

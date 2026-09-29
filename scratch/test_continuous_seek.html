@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Continuous Seek Test</title>
+</head>
+<body style="background:#111;color:#fff;font-family:sans-serif;text-align:center;padding:20px;">
+<h2>Video Continuous Seek 120Hz Test</h2>
+<video id="v" src="../01-Character_animation_gaze_movement_1080p_20260926003206_240fps.mp4" width="960" height="540" muted playsinline preload="auto"></video>
+<div id="stats" style="margin-top:20px;font-family:monospace;white-space:pre;font-size:18px;">Initializing...</div>
+<script>
+const v = document.getElementById('v');
+const stats = document.getElementById('stats');
+
+let targetTime = 0.0;
+let currentTime = 0.0;
+let isSeeking = false;
+let seekCount = 0;
+let rafCount = 0;
+let lastFpsTime = performance.now();
+let fps = 0;
+
+v.addEventListener('loadedmetadata', () => {
+  stats.textContent = 'Metadata loaded. Move mouse around to test seeking response.';
+  requestAnimationFrame(loop);
+});
+
+window.addEventListener('pointermove', (e) => {
+  // Map x to 0..10s
+  targetTime = (e.clientX / window.innerWidth) * 10.0;
+});
+
+v.addEventListener('seeked', () => {
+  isSeeking = false;
+});
+
+function loop(now) {
+  rafCount++;
+  if (now - lastFpsTime >= 1000) {
+    fps = rafCount;
+    rafCount = 0;
+    lastFpsTime = now;
+  }
+  
+  // Lerp currentTime towards targetTime
+  currentTime += (targetTime - currentTime) * 0.15;
+  
+  // Issue seek if not currently seeking and difference is meaningful
+  if (!isSeeking && Math.abs(v.currentTime - currentTime) > 0.01) {
+    isSeeking = true;
+    seekCount++;
+    v.currentTime = currentTime;
+  }
+  
+  stats.textContent = `FPS: ${fps} | Target: ${targetTime.toFixed(2)}s | Current: ${currentTime.toFixed(2)}s | Video: ${v.currentTime.toFixed(2)}s | Seeks: ${seekCount}`;
+  requestAnimationFrame(loop);
+}
+</script>
+</body>
+</html>

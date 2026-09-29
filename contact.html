@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us • Sakthi Dental Clinic Hosur</title>
+  <meta name="description" content="Get in touch with Sakthi Dental Clinic in Hosur. Book appointments, inquire about treatments, or reach us at Anthivadi, Hosur, Tamil Nadu.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="minimal-nav" id="siteNav">
+    <a href="index.html" class="nav-brand" id="brandLogo">
+      <span class="brand-sparkle">✦</span>
+      <span>Sakthi Dental</span>
+      <span class="brand-sub">HOSUR</span>
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-nav-reserve" data-open-appointment>
+        <span>Fix an Appointment</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <button class="btn-mobile-nav-toggle" id="btnMobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="nav-brand">
+        <span class="brand-sparkle">✦</span>
+        <span>Sakthi Dental</span>
+      </div>
+      <button class="btn-close-mobile" id="closeMobileNav" aria-label="Close navigation">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+      <li><a href="faqs.html" class="mobile-nav-link">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      <li><a href="privacy-policy.html" class="mobile-nav-link">Privacy Policy</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn-pill-primary" style="width: 100%; justify-content: center;" data-open-appointment>
+        <span>Fix an Appointment</span>
+      </button>
+    </div>
+  </aside>
+
+  <main style="padding-top: 100px;">
+    <!-- Page Intro Header -->
+    <section class="section-wrapper" style="padding-bottom: 20px;">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Get in Touch</span>
+          <h1 class="section-title">Contact Us</h1>
+          <p class="section-subtitle">
+            Whether you have a dental query, want to plan your family's oral care, or need prompt appointment scheduling in Hosur, our team is at your service.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section (Left: Form, Right: Reach Us) -->
+    <section class="section-wrapper" style="padding-top: 0;">
+      <div class="section-inner">
+        <div class="contact-container">
+          
+          <!-- Left Side: Contact Form -->
+          <div class="contact-form-side">
+            <span class="section-tag" style="align-self: flex-start;">Send a Message</span>
+            <h2 class="contact-side-title">We would love to hear from you</h2>
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.5rem;">
+              Fill out the form below with your inquiry, and our reception team in Hosur will reach out to you directly during clinic hours.
+            </p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-status-alert" id="contactStatusMsg" role="alert"></div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactName">Name *</label>
+                <input 
+                  type="text" 
+                  id="contactName" 
+                  class="form-input" 
+                  placeholder="Enter your full name" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email *</label>
+                <input 
+                  type="email" 
+                  id="contactEmail" 
+                  class="form-input" 
+                  placeholder="Enter your email address" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone Number *</label>
+                <input 
+                  type="tel" 
+                  id="contactPhone" 
+                  class="form-input" 
+                  placeholder="Enter contact phone number" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Your Message</label>
+                <textarea 
+                  id="contactMessage" 
+                  class="form-textarea" 
+                  placeholder="Tell us about your dental concern, treatment question, or preferred appointment timing..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-contact-submit" id="btnSubmitContactForm">
+                <span>Submit</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Side: Clinic Contact Information -->
+          <div class="reach-us-side">
+            <h2 class="reach-title">Reach us</h2>
+            
+            <div class="reach-items-list">
+              <!-- Address -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">📍</div>
+                <div class="reach-details">
+                  <span class="reach-label">Clinic Address</span>
+                  <div class="reach-value">
+                    B2/8, SBM Layout, Anthivadi,<br>
+                    Hosur, Tamil Nadu 635109, India
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">📧</div>
+                <div class="reach-details">
+                  <span class="reach-label">Email Address</span>
+                  <div class="reach-value">
+                    <a href="mailto:info@sakthidentalclinic.in">info@sakthidentalclinic.in</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">📞</div>
+                <div class="reach-details">
+                  <span class="reach-label">Direct Phone Numbers</span>
+                  <div class="reach-value">
+                    <a href="tel:+919862890897">+91 9862890897</a> / <a href="tel:+919363298118">+91 9363298118</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timings -->
+              <div class="reach-item">
+                <div class="reach-icon-box" aria-hidden="true">⏰</div>
+                <div class="reach-details">
+                  <span class="reach-label">Consultation Timings</span>
+                  <div class="reach-value">
+                    <strong>Sunday to Saturday: 9am to 7pm</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Facilities Pill Strip -->
+            <div style="border-top: 1px solid var(--glass-border-subtle); padding-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;">
+              <span class="reach-label">On-Site Amenities</span>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <span class="treatment-category-tag" style="background: rgba(255,255,255,0.7);">🚗 Free Parking</span>
+                <span class="treatment-category-tag" style="background: rgba(255,255,255,0.7);">♿ Wheelchair Ramp</span>
+                <span class="treatment-category-tag" style="background: rgba(255,255,255,0.7);">🚐 Transit Support</span>
+                <span class="treatment-category-tag" style="background: rgba(255,255,255,0.7);">👨‍⚕️ Doctors 9am-9pm</span>
+              </div>
+            </div>
+
+            <!-- Fast Action Box -->
+            <div style="background: rgba(216, 137, 36, 0.1); border: 1px solid rgba(216, 137, 36, 0.25); border-radius: var(--radius-md); padding: 1.2rem; margin-top: 0.5rem;">
+              <div style="font-family: var(--font-display); font-weight: 700; color: var(--accent-amber); font-size: 0.96rem;">
+                Need Immediate Emergency Care?
+              </div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 4px; line-height: 1.5;">
+                For acute dental trauma, severe toothache, or swelling, please call our direct hotline at <a href="tel:+919862890897" style="font-weight: 700; color: var(--text-primary);">+91 9862890897</a> for prioritized attention.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Map & Location Guide -->
+    <section class="section-wrapper" style="padding-top: 0;">
+      <div class="section-inner">
+        <div class="assurance-banner">
+          <div class="assurance-content">
+            <span class="section-tag" style="align-self: flex-start;">Clinic Location</span>
+            <h2 class="assurance-title">Finding Sakthi Dental Clinic in Hosur</h2>
+            <p class="assurance-body">
+              Located conveniently at SBM Layout, Anthivadi, our clinic is easily accessible from all key parts of Hosur and nearby transit hubs. Hassle-free parking and wheelchair access ensure a smooth arrival.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://maps.google.com/?q=Hosur+Tamil+Nadu+635109" target="_blank" rel="noopener noreferrer" class="btn-pill-primary">
+                <span>Open in Google Maps</span>
+                <div class="btn-arrow-circle" aria-hidden="true">↗</div>
+              </a>
+            </div>
+          </div>
+          <div class="assurance-cards-grid">
+            <div class="assurance-card">
+              <span style="font-size: 1.4rem;">📍</span>
+              <h3 class="assurance-card-title">Landmark Guidance</h3>
+              <p class="assurance-card-text">Anthivadi neighborhood, Hosur 635109. Near SBM Layout residential area.</p>
+            </div>
+            <div class="assurance-card">
+              <span style="font-size: 1.4rem;">🚗</span>
+              <h3 class="assurance-card-title">Patient Parking</h3>
+              <p class="assurance-card-text">Ample street and dedicated on-site space available right in front of the clinic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand-title">✦ SAKTHI DENTAL CLINIC</div>
+        <p class="footer-tagline">
+          Specialized dental care tailored especially for women, children, and families in Hosur. Combining 20+ years of clinical excellence with gentle, modern technology.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="index.html">Home</a></li>
+          <li class="footer-link-item"><a href="about.html">About Us</a></li>
+          <li class="footer-link-item"><a href="treatments.html">Treatments</a></li>
+          <li class="footer-link-item"><a href="faqs.html">FAQs</a></li>
+          <li class="footer-link-item"><a href="contact.html">Contact Us</a></li>
+          <li class="footer-link-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Key Treatments</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="treatments.html#scaling">Teeth Cleaning & Scaling</a></li>
+          <li class="footer-link-item"><a href="treatments.html#filling">Tooth Filling</a></li>
+          <li class="footer-link-item"><a href="treatments.html#extraction">Tooth Extraction</a></li>
+          <li class="footer-link-item"><a href="treatments.html#implants">Dental Implants</a></li>
+          <li class="footer-link-item"><a href="treatments.html#laser">Laser Dentistry</a></li>
+          <li class="footer-link-item"><a href="treatments.html#braces">Orthodontic Braces</a></li>
+          <li class="footer-link-item"><a href="treatments.html#aligners">Clear Aligners</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hosur Clinic</h4>
+        <div style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+          B2/8, SBM Layout, Anthivadi,<br>
+          Hosur, Tamil Nadu 635109, India<br><br>
+          <strong>Phone:</strong> +91 9862890897 / +91 9363298118<br>
+          <strong>Email:</strong> info@sakthidentalclinic.in<br>
+          <strong>Hours:</strong> Sun – Sat: 9am – 7pm
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-row">
+      <div>© 2026 Sakthi Dental Clinic. All Rights Reserved.</div>
+      <div>Hosur, Tamil Nadu • Specialized in Women, Children & Families</div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal Dialog -->
+  <div class="modal-overlay" id="appointmentModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalApptTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="section-tag" style="margin-bottom: 4px;">Book Visit</span>
+          <h3 class="modal-title" id="modalApptTitle">Fix an Appointment</h3>
+        </div>
+        <button class="btn-close-modal" id="closeAppointmentModal" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <form id="appointmentModalForm">
+        <div class="form-status-alert" id="appointmentStatusMsg" role="alert"></div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPatientName">Patient Full Name *</label>
+          <input type="text" id="modalPatientName" class="form-input" placeholder="Enter patient full name" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPatientPhone">Contact Phone Number *</label>
+          <input type="tel" id="modalPatientPhone" class="form-input" placeholder="Enter contact phone number" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalTreatmentSelect">Desired Treatment / Consultation</label>
+          <select id="modalTreatmentSelect" class="form-select">
+            <option value="General Consultation">General Consultation</option>
+            <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+            <option value="Tooth Filling">Tooth Filling</option>
+            <option value="Tooth Extraction">Tooth Extraction</option>
+            <option value="Orthodontic Braces">Orthodontic Braces</option>
+            <option value="Clear Aligners">Clear Aligners</option>
+            <option value="Dental Implants">Dental Implants</option>
+            <option value="Laser Dentistry">Laser Dentistry</option>
+            <option value="Other Procedure">Other Dental Care</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 18px;">
+          <label class="form-label" for="modalApptDate">Preferred Appointment Date</label>
+          <input type="date" id="modalApptDate" class="form-input">
+        </div>
+
+        <button type="submit" class="btn-pill-primary" style="width: 100%; justify-content: center;">
+          <span>Fix an Appointment</span>
+          <div class="btn-arrow-circle" aria-hidden="true">→</div>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

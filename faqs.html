@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQs) • Sakthi Dental Clinic Hosur</title>
+  <meta name="description" content="Find expert answers to common dental questions about scaling, braces, fillings, root canals, implants, and oral hygiene from Sakthi Dental Clinic.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="minimal-nav" id="siteNav">
+    <a href="index.html" class="nav-brand" id="brandLogo">
+      <span class="brand-sparkle">✦</span>
+      <span>Sakthi Dental</span>
+      <span class="brand-sub">HOSUR</span>
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="faqs.html" class="nav-link active">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-nav-reserve" data-open-appointment>
+        <span>Fix an Appointment</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <button class="btn-mobile-nav-toggle" id="btnMobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="nav-brand">
+        <span class="brand-sparkle">✦</span>
+        <span>Sakthi Dental</span>
+      </div>
+      <button class="btn-close-mobile" id="closeMobileNav" aria-label="Close navigation">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="treatments.html" class="mobile-nav-link">Treatments</a></li>
+      <li><a href="faqs.html" class="mobile-nav-link active">FAQs</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="privacy-policy.html" class="mobile-nav-link">Privacy Policy</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <button class="btn-pill-primary" style="width: 100%; justify-content: center;" data-open-appointment>
+        <span>Fix an Appointment</span>
+      </button>
+    </div>
+  </aside>
+
+  <main style="padding-top: 100px;">
+    <!-- Header Section -->
+    <section class="section-wrapper" style="padding-bottom: 20px;">
+      <div class="section-inner">
+        <div class="section-header-centered">
+          <span class="section-tag">Patient Knowledge Base</span>
+          <h1 class="section-title">Frequently Asked Questions (FAQs)</h1>
+          <p class="section-subtitle">
+            Clear, doctor-reviewed answers to the most common questions regarding treatments, dental hygiene, oral surgery, and preventive care.
+          </p>
+        </div>
+
+        <!-- Live FAQ Search Filter -->
+        <div class="faq-search-wrapper">
+          <span class="faq-search-icon" aria-hidden="true">🔍</span>
+          <input 
+            type="search" 
+            class="faq-search-input" 
+            id="faqSearchInput" 
+            placeholder="Type keyword (e.g. pain, scaling, braces, RCT, implants, brush)..." 
+            aria-label="Search frequently asked questions"
+          >
+          <div id="faqMatchCount" style="text-align: center; margin-top: 8px; font-size: 0.85rem; color: var(--accent-lavender); font-weight: 600;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- All 14 FAQs Accordion List -->
+    <section class="section-wrapper" style="padding-top: 0;">
+      <div class="section-inner">
+        <div class="faq-accordion-list" id="faqAccordionContainer">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ1">
+              <span>1. Can medication completely relieve tooth pain?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ1">
+              <div class="faq-answer-inner">
+                Not entirely. While medications may offer short-term relief, long-lasting relief requires identifying and treating the root cause of the pain through professional dental care.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ2">
+              <span>2. Does teeth scaling cause enamel damage, sensitivity, or gaps between teeth?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ2">
+              <div class="faq-answer-inner">
+                No. Scaling safely removes plaque and tartar from teeth and below the gum line. It doesn’t damage enamel or create gaps. Some temporary sensitivity may occur, but it usually subsides as gums heal and reattach to the teeth.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ3">
+              <span>3. Can fluorosis stains be removed through scaling?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ3">
+              <div class="faq-answer-inner">
+                Scaling can remove surface (extrinsic) stains but not fluorosis, which is an internal (intrinsic) stain. Fluorosis may require treatments like bleaching, veneers, or crowns for cosmetic improvement.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ4">
+              <span>4. Can painful teeth be treated with fillings?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ4">
+              <div class="faq-answer-inner">
+                Not always. If the cavity has reached the pulp, the innermost layer of the tooth, simple filling won’t help. In such cases, root canal treatment or tooth extraction might be necessary. Fillings are effective only when the damage is limited to the outer layers (enamel and dentin).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ5">
+              <span>5. Is placing a cap or crown necessary after root canal treatment (RCT)?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ5">
+              <div class="faq-answer-inner">
+                Yes. A crown is recommended after RCT to protect the treated tooth, which may be weaker due to decay. It prevents fractures and adds durability, especially during chewing.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ6">
+              <span>6. Can milk teeth need root canal treatment (RCT)?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ6">
+              <div class="faq-answer-inner">
+                Yes. If a milk tooth has a deep cavity and is likely to remain in the mouth for some time, an RCT can preserve it and prevent infection or early loss.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ7">
+              <span>7. How can I maintain good oral hygiene?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ7">
+              <div class="faq-answer-inner">
+                Brush your teeth twice daily with proper technique, rinse after meals, floss regularly, and schedule routine check-ups with your dentist to maintain healthy teeth and gums.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ8">
+              <span>8. What is the best age to get braces?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ8">
+              <div class="faq-answer-inner">
+                Braces are most effective between ages 12 and 14, when the jaw and teeth are still developing. However, some cases may benefit from earlier intervention depending on the condition.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ9">
+              <span>9. Do all wisdom teeth need to be removed?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ9">
+              <div class="faq-answer-inner">
+                No. Wisdom teeth only require removal if they are impacted, infected, or causing pain due to crowding or damage to adjacent teeth.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ10">
+              <span>10. Is it important to replace missing teeth after extraction?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ10">
+              <div class="faq-answer-inner">
+                Yes. Replacing extracted teeth helps maintain proper bite alignment and prevents adjacent teeth from shifting, which can affect chewing and overall oral function.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 11 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ11">
+              <span>11. What are the benefits of dental implants?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ11">
+              <div class="faq-answer-inner">
+                Dental implants restore both the appearance and functionality of missing teeth. They provide a stable, natural-looking solution that can improve confidence and overall quality of life.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 12 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ12">
+              <span>12. Which type of toothbrush and toothpaste should I use?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ12">
+              <div class="faq-answer-inner">
+                Use a soft or medium-bristled toothbrush with a small head for better reach. Choose a non-abrasive fluoride toothpaste and replace your toothbrush every three months for optimal hygiene.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 13 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ13">
+              <span>13. What causes tooth sensitivity?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ13">
+              <div class="faq-answer-inner">
+                Tooth sensitivity can result from enamel wear (due to attrition or abrasion), tooth decay, exposed tooth roots, or hairline cracks in the teeth.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 14 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false" id="faqQ14">
+              <span>14. How often should I see a dentist?</span>
+              <div class="faq-icon-chevron" aria-hidden="true">▼</div>
+            </button>
+            <div class="faq-answer-pane" role="region" aria-labelledby="faqQ14">
+              <div class="faq-answer-inner">
+                Visiting your dentist every six months is recommended for routine check-ups, professional cleaning, and preventive care to maintain good oral health.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Still have questions? Callout -->
+        <div class="assurance-banner" style="margin-top: 4.5rem;">
+          <div class="assurance-content">
+            <span class="section-tag" style="align-self: flex-start;">Have Another Question?</span>
+            <h2 class="assurance-title">Our Hosur dental team is here to help.</h2>
+            <p class="assurance-body">
+              If your specific dental query is not covered above, reach out directly or schedule an appointment. We provide clear, friendly explanations for every procedure.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <button class="btn-pill-primary" data-open-appointment>
+                <span>Fix an Appointment</span>
+                <div class="btn-arrow-circle" aria-hidden="true">→</div>
+              </button>
+              <a href="contact.html" class="btn-pill-glass">
+                <span>Contact Us Page</span>
+              </a>
+            </div>
+          </div>
+          <div class="assurance-cards-grid">
+            <div class="assurance-card">
+              <span style="font-size: 1.4rem;">📞</span>
+              <h3 class="assurance-card-title">Call Us Directly</h3>
+              <p class="assurance-card-text"><a href="tel:+919862890897" style="color: var(--accent-amber); font-weight: 700;">+91 9862890897</a> / +91 9363298118</p>
+            </div>
+            <div class="assurance-card">
+              <span style="font-size: 1.4rem;">📧</span>
+              <h3 class="assurance-card-title">Email Clinical Inquiries</h3>
+              <p class="assurance-card-text"><a href="mailto:info@sakthidentalclinic.in" style="color: var(--accent-amber); font-weight: 700;">info@sakthidentalclinic.in</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Universal Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand-title">✦ SAKTHI DENTAL CLINIC</div>
+        <p class="footer-tagline">
+          Specialized dental care tailored especially for women, children, and families in Hosur. Combining 20+ years of clinical excellence with gentle, modern technology.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="index.html">Home</a></li>
+          <li class="footer-link-item"><a href="about.html">About Us</a></li>
+          <li class="footer-link-item"><a href="treatments.html">Treatments</a></li>
+          <li class="footer-link-item"><a href="faqs.html">FAQs</a></li>
+          <li class="footer-link-item"><a href="contact.html">Contact Us</a></li>
+          <li class="footer-link-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Key Treatments</h4>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="treatments.html#scaling">Teeth Cleaning & Scaling</a></li>
+          <li class="footer-link-item"><a href="treatments.html#filling">Tooth Filling</a></li>
+          <li class="footer-link-item"><a href="treatments.html#extraction">Tooth Extraction</a></li>
+          <li class="footer-link-item"><a href="treatments.html#implants">Dental Implants</a></li>
+          <li class="footer-link-item"><a href="treatments.html#laser">Laser Dentistry</a></li>
+          <li class="footer-link-item"><a href="treatments.html#braces">Orthodontic Braces</a></li>
+          <li class="footer-link-item"><a href="treatments.html#aligners">Clear Aligners</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hosur Clinic</h4>
+        <div style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">
+          B2/8, SBM Layout, Anthivadi,<br>
+          Hosur, Tamil Nadu 635109, India<br><br>
+          <strong>Phone:</strong> +91 9862890897 / +91 9363298118<br>
+          <strong>Email:</strong> info@sakthidentalclinic.in<br>
+          <strong>Hours:</strong> Sun – Sat: 9am – 7pm
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-row">
+      <div>© 2026 Sakthi Dental Clinic. All Rights Reserved.</div>
+      <div>Hosur, Tamil Nadu • Specialized in Women, Children & Families</div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal Dialog -->
+  <div class="modal-overlay" id="appointmentModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalApptTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="section-tag" style="margin-bottom: 4px;">Book Visit</span>
+          <h3 class="modal-title" id="modalApptTitle">Fix an Appointment</h3>
+        </div>
+        <button class="btn-close-modal" id="closeAppointmentModal" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <form id="appointmentModalForm">
+        <div class="form-status-alert" id="appointmentStatusMsg" role="alert"></div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPatientName">Patient Full Name *</label>
+          <input type="text" id="modalPatientName" class="form-input" placeholder="Enter patient full name" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalPatientPhone">Contact Phone Number *</label>
+          <input type="tel" id="modalPatientPhone" class="form-input" placeholder="Enter contact phone number" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label class="form-label" for="modalTreatmentSelect">Desired Treatment / Consultation</label>
+          <select id="modalTreatmentSelect" class="form-select">
+            <option value="General Consultation">General Dental Consultation</option>
+            <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+            <option value="Tooth Filling">Tooth Filling</option>
+            <option value="Tooth Extraction">Tooth Extraction</option>
+            <option value="Orthodontic Braces">Orthodontic Braces</option>
+            <option value="Clear Aligners">Clear Aligners</option>
+            <option value="Dental Implants">Dental Implants</option>
+            <option value="Laser Dentistry">Laser Dentistry</option>
+            <option value="Other Procedure">Other Dental Care</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 18px;">
+          <label class="form-label" for="modalApptDate">Preferred Appointment Date</label>
+          <input type="date" id="modalApptDate" class="form-input">
+        </div>
+
+        <button type="submit" class="btn-pill-primary" style="width: 100%; justify-content: center;">
+          <span>Fix an Appointment</span>
+          <div class="btn-arrow-circle" aria-hidden="true">→</div>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id='c' width='320' height='180'></canvas>
+<script>
+const img = new Image();
+img.onload = () => {
+    const c = document.getElementById('c');
+    const ctx = c.getContext('2d');
+    try {
+        ctx.drawImage(img, 320 * 10, 0, 320, 180, 0, 0, 320, 180);
+        console.log('DRAW_SUCCESS width=' + img.naturalWidth + ' height=' + img.naturalHeight);
+    } catch(e) {
+        console.error('DRAW_FAILED', e);
+    }
+};
+img.onerror = (e) => console.error('IMG_LOAD_ERROR', e);
+img.src = 'test_png_76800.png';
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Seek Test</title>
+</head>
+<body style="background:#111;color:#fff;font-family:sans-serif;text-align:center;padding:20px;">
+<h2>Video Seek Latency Test</h2>
+<video id="v" src="../01-Character_animation_gaze_movement_1080p_20260926003206_240fps.mp4" width="640" height="360" muted playsinline preload="auto"></video>
+<div id="log" style="margin-top:20px;font-family:monospace;white-space:pre;">Loading video...</div>
+<script>
+const v = document.getElementById('v');
+const log = document.getElementById('log');
+
+v.addEventListener('loadedmetadata', () => {
+  log.textContent = `Video loaded: duration=${v.duration}s, size=${v.videoWidth}x${v.videoHeight}\nStarting seek benchmark...`;
+  runBenchmark();
+});
+
+async function runBenchmark() {
+  const seekTimes = [0.0, 1.2, 3.5, 5.8, 7.2, 8.9, 0.5, 4.0, 9.5, 0.0];
+  let totalDuration = 0;
+  let results = [];
+  
+  for (let t of seekTimes) {
+    const t0 = performance.now();
+    await new Promise(resolve => {
+      v.currentTime = t;
+      v.addEventListener('seeked', function handler() {
+        v.removeEventListener('seeked', handler);
+        resolve();
+      });
+    });
+    const dt = performance.now() - t0;
+    totalDuration += dt;
+    results.push(`Seek to ${t}s took ${dt.toFixed(1)}ms`);
+  }
+  
+  log.textContent = results.join('\n') + `\n\nAverage seek latency: ${(totalDuration / seekTimes.length).toFixed(1)}ms`;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin: 0; background: #111; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+canvas { width: 640px; height: 360px; border: 2px solid #555; image-rendering: auto; }
+#status { color: #fff; font-family: sans-serif; margin-top: 10px; }
+</style>
+</head>
+<body>
+<canvas id='c' width='256' height='144'></canvas>
+<div id='status'>Loading...</div>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const status = document.getElementById('status');
+const img = new Image();
+let frame = 0;
+let fps = 0;
+let lastTime = performance.now();
+let frameCount = 0;
+
+img.onload = () => {
+    status.textContent = 'Loaded: ' + img.naturalWidth + 'x' + img.naturalHeight;
+    function loop() {
+        ctx.clearRect(0, 0, 256, 144);
+        ctx.drawImage(img, frame * 256, 0, 256, 144, 0, 0, 256, 144);
+        frame = (frame + 1) % 240;
+        frameCount++;
+        const now = performance.now();
+        if (now - lastTime >= 1000) {
+            fps = frameCount;
+            frameCount = 0;
+            lastTime = now;
+            status.textContent = 'Playing 240 frames @ ' + fps + ' FPS | Size: ' + img.naturalWidth + 'x' + img.naturalHeight;
+        }
+        requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+};
+img.onerror = (e) => {
+    status.textContent = 'Error loading image';
+};
+img.src = 'test_spritesheet_240.jpg';
+</script>
+</body>
+</html>
