@@ -74,16 +74,15 @@ The final interface also includes an interactive direction testing system that h
 
 ---
 
-## 🎥 Final Interactive Hero Demo
+# 🖼️ The Starting Point
 
-The final working interaction is demonstrated in the video below.
+Before building the final interaction, I first focused on creating the visual foundation of the website.
 
-<video controls width="100%">
-  <source src="./video/cursor-controlled-hero.mp4" type="video/mp4">
-  Your browser does not support embedded video.
-</video>
+<p align="center">
+  <img src="./docs/images/start.png" alt="Initial Sakthi Dental Clinic website" width="100%">
+</p>
 
-**Video:** `video/cursor-controlled-hero.mp4`
+The initial goal was to establish the clinic's visual identity, layout, typography and overall user experience before experimenting with the interactive hero.
 
 ---
 
@@ -116,6 +115,12 @@ Displayed Frame
 ```
 I experimented with a custom cursor-scrubbing component and different tracking configurations.
 Initial Result
+<p align="center">
+  <img src="./docs/images/videonotperfect.png"
+       alt="Initial cursor controlled video experiment"
+       width="90%">
+</p>
+
 The concept worked, but several problems appeared:
 - Playback did not feel completely smooth
 - Rapid cursor movement caused visible jumps
@@ -137,8 +142,13 @@ The component provided controls for:
 - Poster image
 - Border radius
 The goal was to make the character respond smoothly to the user's cursor while keeping the implementation reusable.
-Development Screenshot
- 
+Development Experiment
+<p align="center">
+  <img src="./docs/images/mistake.png"
+       alt="Interactive video component experiment"
+       width="90%">
+</p>
+
 This approach helped me understand the fundamentals of:
 - Cursor tracking
 - Normalized coordinates
@@ -165,7 +175,12 @@ Animation State
 Displayed Character Frame
 
 Component Experiment
- 
+<p align="center">
+  <img src="./docs/images/framerrerrors.png"
+       alt="Cursor gaze component and frame rendering experiment"
+       width="90%">
+</p>
+
 This was a major improvement because the interaction could now be designed around the character's gaze instead of simply scrubbing a video timeline.
 
 ## 4️⃣ The Performance Problem
@@ -175,8 +190,15 @@ I wanted high-quality movement in multiple directions, which meant generating an
 The final animation source contained:
 1920 × 1080 resolution
 2,400 frames
+
 That introduced several problems.
 Problems encountered
+<p align="center">
+  <img src="./docs/images/laggyerrors.png"
+       alt="Animation performance and lag issues"
+       width="90%">
+</p>
+
 - Large amount of image data
 - Frame loading delays
 - Browser memory pressure
@@ -259,8 +281,7 @@ It allowed me to test:
 - ↘ Bottom-Right
 I also added rapid movement and slow orbit-style tests to evaluate how the animation behaved under different cursor movements.
 Final Testing Interface
- 
-This testing process was important because an interaction can appear correct during slow movement but behave completely differently during rapid cursor movement.
+The testing process was important because an interaction can appear correct during slow movement but behave completely differently during rapid cursor movement.
 
 ## 9️⃣ Final Successful Implementation
 
@@ -276,7 +297,12 @@ The final hero combines:
 - Direction testing
 - Responsive hero layout
 Final Hero
- 
+<p align="center">
+  <img src="./docs/images/aipolished%20website.png"
+       alt="Final polished Sakthi Dental Clinic website"
+       width="100%">
+</p>
+
 The character now responds to cursor movement while the surrounding website remains functional and responsive.
 
 ## 🧠 What This Process Taught Me
@@ -304,15 +330,15 @@ The failed approaches were actually important because each one helped identify w
 
 The final website combines a professional healthcare interface with an interactive visual experience.
 The completed hero provides:
-✅ Cursor-controlled character interaction
-✅ Multiple viewing directions
-✅ 1920×1080 source quality
-✅ 2,400-frame animation sequence
-✅ Frame-based rendering
-✅ Frame caching
-✅ Canvas rendering
-✅ Responsive layout
-✅ Interactive testing tools  
+- ✅ Cursor-controlled character interaction
+- ✅ Multiple viewing directions
+- ✅ 1920×1080 source quality
+- ✅ 2,400-frame animation sequence
+- ✅ Frame-based rendering
+- ✅ Frame caching
+- ✅ Canvas rendering
+- ✅ Responsive layout
+- ✅ Interactive testing tools
 ✨ Website Features
 🦷 Treatments
 Structured presentation of dental treatments and services.
@@ -363,3 +389,54 @@ Development
 - Git
 - GitHub
 - VS Code
+🎥 Video Demonstrations
+The videos below document the progression from experimentation to the final working website.
+1. Character Animation / Gaze Movement
+[🎬 View Character Animation / Gaze Movement](./docs/videos/)
+This video demonstrates the character gaze and directional interaction during development.
+2. Cursor-Controlled Animation Errors
+[🎬 View Cursor-Controlled Animation Experiment](./docs/videos/)
+This captures one of the experimental stages where the cursor-controlled animation still had issues.
+3. First AI-Polished Website
+[🎬 View First AI-Polished Website](./docs/videos/firstapolishedwebsite.mp4)
+This shows an earlier polished version of the website before the final interaction and implementation were completed.
+4. Final Website
+[🎬 View Final Website Demo](./docs/videos/Finalwebsite.mp4)
+This is the final implementation of the Sakthi Dental Clinic website and its interactive hero experience.
+🚀 Final Takeaway
+What started as a simple idea of making a character follow the cursor became a much deeper exploration of interactive animation.
+The project went through:
+Initial Website
+      ↓
+Video-Based Interaction
+      ↓
+Cursor Scrubbing
+      ↓
+Video Seeking Problems
+      ↓
+Custom Cursor-Gaze Component
+      ↓
+Frame Loading Problems
+      ↓
+Performance & Lag
+      ↓
+Frame-Based Rendering
+      ↓
+Frame Caching
+      ↓
+Canvas Rendering
+      ↓
+Direction Testing
+      ↓
+Final Working Interaction
+
+The final result is not just a dental website.
+It is an experiment in building a high-resolution, cursor-controlled interactive animation system while keeping the overall website responsive and usable.
+
+### One thing I deliberately did
+
+I **didn't turn the README into a generic polished portfolio README**. The original narrative stays intact. The screenshots appear as evidence at the stages where the problems happened, and the videos are **all pushed to the very bottom**, exactly as you asked.
+
+Your original README's core technical claims—2,400 frames, 1920×1080, frame caching, canvas rendering and the final interaction pipeline—are preserved rather than replaced. :chatgpt-content-reference{index="2"} :chatgpt-content-reference{index="3"}
+
+**Important:** the two video filenames beginning with `01-Character...` and `Cursorscontrol...` are truncated in your VS Code Explorer screenshot, so I intentionally did **not fabricate their full names**. Once you give me those two exact names, those two links can be changed to direct links in literally two lines.
