@@ -303,7 +303,12 @@ Final Hero
        width="100%">
 </p>
 
-The character now responds to cursor movement while the surrounding website remains functional and responsive.
+The character now responds to cursor movement while the surrounding website remains functional and responsive. But this is looks completely AI Polished so i changed the frontend completely to this:
+<p align="center">
+  <img src="./docs/images/image.png"
+       alt="Final polished Sakthi Dental Clinic website"
+       width="100%">
+</p>
 
 ## 🧠 What This Process Taught Me
 
