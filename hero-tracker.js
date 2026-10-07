@@ -10,6 +10,7 @@ class FrameCacheManager {
     this.maxConcurrentDecodes = maxConcurrentDecodes;
     this.cache = new Map();
     this.inFlight = new Set();
+    this.queue = [];
     this.activeDecodes = 0;
     this.latestRequestedFrame = 0;
     this.displayedFrame = 0;
@@ -46,13 +47,41 @@ class FrameCacheManager {
       onReady(frame, cached);
       return;
     }
+    // Keep the visual responding while an exact frame is decoding.
+    let nearestFrame = -1;
+    let nearestDistance = Infinity;
+    for (const [candidate, image] of this.cache) {
+      const difference = Math.abs(candidate - frame);
+      const distance = Math.min(difference, this.totalFrames - difference);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearestFrame = candidate;
+        var nearestImage = image;
+      }
+    }
+    if (nearestFrame >= 0 && nearestFrame !== this.displayedFrame) onReady(nearestFrame, nearestImage);
+    this.queue = [frame, ...this.queue.filter(item => item !== frame)];
+    // Nearby frames are likely next as the cursor moves. Keep a small window decoded.
+    if (this.cache.size) {
+      for (let offset = 1; offset <= 3; offset++) {
+        for (const nearby of [this.normalize(frame - offset), this.normalize(frame + offset)]) {
+          if (!this.cache.has(nearby) && !this.inFlight.has(nearby) && !this.queue.includes(nearby)) this.queue.push(nearby);
+        }
+      }
+    }
     this._pump();
   }
 
   _pump() {
     if (this.activeDecodes >= this.maxConcurrentDecodes) return;
-    const frame = this.latestRequestedFrame;
-    if (this.cache.has(frame) || this.inFlight.has(frame)) return;
+    while (this.queue.length && (this.cache.has(this.queue[0]) || this.inFlight.has(this.queue[0]))) this.queue.shift();
+    const frame = this.queue.shift();
+    if (frame === undefined) {
+      const latest = this.latestRequestedFrame;
+      if (this.cache.has(latest) || this.inFlight.has(latest)) return;
+      this.queue.push(latest);
+      return this._pump();
+    }
 
     this.activeDecodes++;
     this.fetchCount++;
@@ -78,7 +107,7 @@ class FrameCacheManager {
       this.inFlight.delete(frame);
       this.activeDecodes--;
       // A rapid cursor move may have replaced the target while this decode ran.
-      if (!this.cache.has(this.latestRequestedFrame)) this._pump();
+      this._pump();
     });
   }
 

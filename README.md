@@ -298,7 +298,7 @@ The final hero combines:
 - Responsive hero layout
 Final Hero
 <p align="center">
-  <img src="./docs/images/aipolished%20website.png"
+  <img src="./docs/images/aipolishedwebsite.png"
        alt="Final polished Sakthi Dental Clinic website"
        width="100%">
 </p>
@@ -392,10 +392,10 @@ Development
 🎥 Video Demonstrations
 The videos below document the progression from experimentation to the final working website.
 1. Character Animation / Gaze Movement
-[🎬 View Character Animation / Gaze Movement](./docs/videos/)
+[🎬 View Character Animation / Gaze Movement](./docs/videos/01-Character_animation_gaze_movement_1080p_20260926003206_240fps.mp4)
 This video demonstrates the character gaze and directional interaction during development.
 2. Cursor-Controlled Animation Errors
-[🎬 View Cursor-Controlled Animation Experiment](./docs/videos/)
+[🎬 View Cursor-Controlled Animation Experiment](./docs/videos/Cursorscontrolanimationerrorsstart.mp4)
 This captures one of the experimental stages where the cursor-controlled animation still had issues.
 3. First AI-Polished Website
 [🎬 View First AI-Polished Website](./docs/videos/firstapolishedwebsite.mp4)
@@ -432,11 +432,3 @@ Final Working Interaction
 
 The final result is not just a dental website.
 It is an experiment in building a high-resolution, cursor-controlled interactive animation system while keeping the overall website responsive and usable.
-
-### One thing I deliberately did
-
-I **didn't turn the README into a generic polished portfolio README**. The original narrative stays intact. The screenshots appear as evidence at the stages where the problems happened, and the videos are **all pushed to the very bottom**, exactly as you asked.
-
-Your original README's core technical claims—2,400 frames, 1920×1080, frame caching, canvas rendering and the final interaction pipeline—are preserved rather than replaced. :chatgpt-content-reference{index="2"} :chatgpt-content-reference{index="3"}
-
-**Important:** the two video filenames beginning with `01-Character...` and `Cursorscontrol...` are truncated in your VS Code Explorer screenshot, so I intentionally did **not fabricate their full names**. Once you give me those two exact names, those two links can be changed to direct links in literally two lines.

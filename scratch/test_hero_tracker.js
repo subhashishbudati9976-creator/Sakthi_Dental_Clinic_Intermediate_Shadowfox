@@ -70,7 +70,7 @@ async function run() {
   hero._handlePointerMove({ clientX: 1824, clientY: 54 });
   now += 16;
   rafCallbacks.shift()(now);
-  assert.strictEqual(hero.cacheManager.activeDecodes, 1);
+  assert(hero.cacheManager.activeDecodes <= 4);
   assert(imageUrls.some(url => /frame_\d{4}\.webp$/.test(url)));
 
   // A newer pointer position supersedes pending work without starting a request storm.
@@ -82,11 +82,11 @@ async function run() {
 
   // Let outstanding decodes drain. The final decoded frame must match the latest target.
   let guard = 0;
-  while ((pendingDecodes.length || hero.cacheManager.activeDecodes) && guard++ < 12) {
+  while ((pendingDecodes.length || hero.cacheManager.activeDecodes) && guard++ < 40) {
     if (pendingDecodes.length) pendingDecodes.shift()();
     await flush();
   }
-  assert(guard < 12, 'Decode queue should drain after pointer input stops.');
+  assert(guard < 40, 'Decode queue should drain after pointer input stops.');
   assert.strictEqual(hero._lastDrawnFrame, hero._lastRequestedFrame);
   assert(hero.cacheManager.cache.size <= 16);
   assert.strictEqual(hero.cacheManager.activeDecodes, 0);
