@@ -1,14 +1,15 @@
 # 🦷 Sakthi Dental Clinic — Interactive Dental Website
 
 > A modern, responsive and interactive website developed for Sakthi Dental Clinic, Hosur, Tamil Nadu, featuring a cinematic cursor-controlled character hero.
-> Deployed Link : 
-sakthi-dental-clinic-blond.vercel.app
 
 ---
 
 ## 🚀 Project Overview
 
 Sakthi Dental Clinic is a modern healthcare website designed to provide patients with a clean, professional and easy-to-navigate digital experience.
+
+Deployed Link : 
+sakthi-dental-clinic-blond.vercel.app
 
 The project was developed around a detailed clinic requirement and focuses on:
 
