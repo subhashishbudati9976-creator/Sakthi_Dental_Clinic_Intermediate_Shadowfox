@@ -9,7 +9,7 @@
 Sakthi Dental Clinic is a modern healthcare website designed to provide patients with a clean, professional and easy-to-navigate digital experience.
 
 Deployed Link : 
-sakthi-dental-clinic-blond.vercel.app
+[sakthi-dental-clinic-blond.vercel.app](https://sakthi-dental-clinic-jrbq91du7.vercel.app/)
 
 The project was developed around a detailed clinic requirement and focuses on:
 
